@@ -1,5 +1,5 @@
 import React, {useState} from 'react'; 
-import {View, Text, StyleSheet, Image, FlatList} from 'react-native'; 
+import {View, Text, StyleSheet, Image, FlatList, Alert} from 'react-native'; 
 import 'react-native-get-random-values'; 
 import { v4 as uuid } from 'uuid'; 
 
@@ -21,10 +21,20 @@ const App = () => {
     }); 
   }
 
+  const addItem = (text) => {
+    if (!text) {
+      Alert.alert('Error', 'Please add an item...', {text: 'Got it!'})
+    } else {
+      setItems(prevItems => {
+        return [{id: uuid(), text}, ...prevItems]
+      }); 
+    }
+  }
+
   return (
     <View style={styles.container}>
       <Header title="Task List" />
-      <AddItem />
+      <AddItem addItem={addItem}/>
       <FlatList 
       data={items} 
       renderItem={({item}) => <ListItem deleteItem={deleteItem} item={item}/>}
