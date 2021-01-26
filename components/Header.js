@@ -13,7 +13,7 @@ const Header = ({ title }) => {
     header: {
         height: 60, 
         padding: 15, 
-        backgroundColor: 'steelblue'
+        backgroundColor: '#2171CC'
     }, 
     text: {
         color: '#fff', 

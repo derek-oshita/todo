@@ -1,6 +1,5 @@
 import React from 'react'; 
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'; 
-// import Icon from 'react-native-vector-icons/dist/FontAwesome'; 
 import { Ionicons, FontAwesome } from '@expo/vector-icons'; 
 
 const ListItem = ({ item, deleteItem }) => {
