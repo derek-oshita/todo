@@ -14,12 +14,18 @@ const App = () => {
     {id: uuid(), text: 'Train'}, 
   ]); 
 
+  const deleteItem = (id) => {
+    setItems(prevItems => {
+      return prevItems.filter(item => item.id != id)
+    }); 
+  }
+
   return (
     <View style={styles.container}>
       <Header title="Task List" />
       <FlatList 
       data={items} 
-      renderItem={({item}) => <ListItem item={item}/>}
+      renderItem={({item}) => <ListItem deleteItem={deleteItem} item={item}/>}
       />
     </View>
   )
