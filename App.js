@@ -4,7 +4,7 @@ import 'react-native-get-random-values';
 import { v4 as uuid } from 'uuid'; 
 
 import Header from './components/Header'; 
-// import ListTask from './components/ListTask'; 
+import ListItem from './components/ListItem'; 
 
 const App = () => {
   const [items, setItems] = useState([
@@ -19,7 +19,7 @@ const App = () => {
       <Header title="Task List" />
       <FlatList 
       data={items} 
-      renderItem={({item}) => <Text>{item.text}</Text>}
+      renderItem={({item}) => <ListItem item={item}/>}
       />
     </View>
   )
@@ -31,6 +31,5 @@ const styles = StyleSheet.create({
     paddingTop: 60
   }
 })
-
 
 export default App; 
