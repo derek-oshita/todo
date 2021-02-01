@@ -1,11 +1,26 @@
 import React, {useState} from 'react'; 
-import {View, Text, StyleSheet, Image, FlatList, Alert} from 'react-native'; 
+import {View, Text, StyleSheet, Image, FlatList, Alert, AppState, Button} from 'react-native'; 
 import 'react-native-get-random-values'; 
 import { v4 as uuid } from 'uuid'; 
+import * as axios from 'react-native-axios'; 
 
 import Header from './components/Header'; 
 import ListItem from './components/ListItem'; 
 import AddItem from './components/AddItem'; 
+import GetItemsIndex from './components/GetItemsIndex'; 
+
+// axios.get('http://localhost:3000/api/items')
+//   .then(function (response) {
+//     let data = response.data; 
+//     console.log(data); 
+//   })
+//   .catch(function (error) {
+//     console.log(`API Requsest Error: ${error}`)
+//     throw error
+//   }); 
+
+
+
 
 const App = () => {
   const [items, setItems] = useState([
@@ -31,14 +46,16 @@ const App = () => {
     }
   }
 
+
   return (
     <View style={styles.container}>
       <Header title="Task List" />
       <AddItem addItem={addItem}/>
-      <FlatList 
+      <GetItemsIndex />
+      {/* <FlatList 
       data={items} 
       renderItem={({item}) => <ListItem deleteItem={deleteItem} item={item}/>}
-      />
+      /> */}
     </View>
   )
 }
