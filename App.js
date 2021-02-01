@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {View, Text, StyleSheet, Image, FlatList, Alert, AppState, Button} from 'react-native'; 
 import 'react-native-get-random-values'; 
 import { v4 as uuid } from 'uuid'; 
-import * as axios from 'react-native-axios'; 
+// import * as axios from 'react-native-axios'; 
 
 import Header from './components/Header'; 
 import ListItem from './components/ListItem'; 
