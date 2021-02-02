@@ -2,8 +2,10 @@ import React, {Component} from 'react';
 import {View, Button} from 'react-native'; 
 
 getData = () => {
-    return fetch('https://enigmatic-garden-30320.herokuapp.com/api/v1/comment')
-    .then((response) => response.json())
+    return fetch('https://mighty-woodland-97273.herokuapp.com/api/items')
+    .then((response) => {
+        return response.json()
+    })
     .then((data) => console.log(data))
     .catch((error) => {
         console.log(error)
@@ -19,7 +21,9 @@ getData = () => {
 /* 
 TRY DEPLOYING THE BACKEND AND THEN USING CONNECTION STRING TO MONGODB VIA CLOUD ATLAS
 
+https://mighty-woodland-97273.herokuapp.com/api/items
 
+THIS WORKED: https://enigmatic-garden-30320.herokuapp.com/api/v1/comment
 */
 
 class GetItemsIndex extends React.Component {
