@@ -3,21 +3,22 @@ import {View, Button} from 'react-native';
 
 const url = 'https://mighty-woodland-97273.herokuapp.com/api/items/'; 
 
-getData = () => {
-    return fetch(url, {
-        method: 'GET', 
-        headers: {
-            'Content-Type': 'application/json'
-        },
-    })
-    .then((response) => {
-        return response.text()
-    })
-    .then((data) => console.log('Success:', data))
-    .catch((error) => {
-        console.log('Error:', error)
-    })
-}
+// getData = () => {
+//     return fetch (url, {
+//         method: 'GET', 
+//         headers: {
+//             'Content-Type': 'application/json'
+//         },
+//     })
+//     .then((response) => {
+//         // used .text() instead of .json() to get a success message... 
+//         return response.text()
+//     })
+//     .then((data) => console.log('Success:', data))
+//     .catch((error) => {
+//         console.log('Error:', error)
+//     })
+// }
 
 
 /* 
@@ -28,6 +29,10 @@ https://github.com/expo/expo/issues/1606
 backend endpoint: https://mighty-woodland-97273.herokuapp.com/api/items
 
 quaranteam backend endpoint: https://enigmatic-garden-30320.herokuapp.com/api/v1/comment
+
+READ NETWORKING DOCS: https://reactnative.dev/docs/network
+
+TRY CREATING A MODEL LIKE IN CLIENT QUARANTEAM... 
 */
 
 class GetItemsIndex extends React.Component {
@@ -35,15 +40,21 @@ class GetItemsIndex extends React.Component {
         state: {}
     }
 
-    // getData = () => {
-    //     return fetch('http://73.223.154.156:4000/api/items')
-    //     .then((response) => response.json())
-    //     .then((data) => console.log(data))
-    //     .catch((error) => {
-    //         console.log(error)
+    // componentDidMount() {
+    //     fetch(url, {
+    //         method: 'GET', 
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
     //     })
+    //     .then((response) => response.json()) 
+    //     .then((data) => {
+    //         this.setState({
+    //             state: data
+    //         })
+    //     })
+    //     .catch((err) => console.log('Error: ', err))
     // }
-
 
     render() {
         return (
