@@ -4,7 +4,7 @@ import {View, Button} from 'react-native';
 import GetItemsModel from '../models/GetItemsModel'; 
 import ItemsList from '../components/ItemsList'; 
 
-const url = 'https://mighty-woodland-97273.herokuapp.com/api/items/'; 
+// const url = 'https://mighty-woodland-97273.herokuapp.com/api/items/'; 
 
 // getData = () => {
 //     return fetch (url, {

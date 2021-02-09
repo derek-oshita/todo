@@ -6,9 +6,8 @@ function ItemsList (props) {
 
     return (
             <View>
-            <Button title="Get Items" onPress={() => console.log(props.items)}>
-            
-            </Button>
+                <Button title="Get Items" onPress={() => console.log(props.items)}>
+                </Button>
             </View>
         )
     
