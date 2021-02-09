@@ -1,5 +1,5 @@
 import React, {useState} from 'react'; 
-import {View, Text, StyleSheet, Image, FlatList, Alert, AppState, Button} from 'react-native'; 
+import {View, Text, StyleSheet, Image, FlatList, Alert, AppState, Button, LogBox} from 'react-native'; 
 import 'react-native-get-random-values'; 
 import { v4 as uuid } from 'uuid'; 
 // import * as axios from 'react-native-axios'; 
@@ -19,8 +19,8 @@ import GetItemsIndex from './components/GetItemsIndex';
 //     throw error
 //   }); 
 
-
-
+// IGNORE LOGBOX NOTIFICATIONS
+LogBox.ignoreLogs(['Remote debugger']);
 
 const App = () => {
   const [items, setItems] = useState([
