@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {View, Button} from 'react-native'; 
 
+import GetItemsModel from '../models/GetItemsModel'; 
+
 const url = 'https://mighty-woodland-97273.herokuapp.com/api/items/'; 
 
 // getData = () => {
@@ -37,7 +39,7 @@ TRY CREATING A MODEL LIKE IN CLIENT QUARANTEAM...
 
 class GetItemsIndex extends React.Component {
     state = {
-        state: {}
+        items: [], 
     }
 
     // componentDidMount() {
