@@ -42,25 +42,17 @@ class GetItemsIndex extends React.Component {
         items: [], 
     }
 
-    // componentDidMount() {
-    //     fetch(url, {
-    //         method: 'GET', 
-    //         headers: {
-    //             'Content-Type': 'application/json'
-    //         },
-    //     })
-    //     .then((response) => response.json()) 
-    //     .then((data) => {
-    //         this.setState({
-    //             state: data
-    //         })
-    //     })
-    //     .catch((err) => console.log('Error: ', err))
-    // }
+    componentDidMount() {
+        GetItemsModel.getAllItems()
+            .then((result) => {
+                this.setState({items: result})
+            })
+            .catch((err) => console.log('Error with GetItemsIndex', err))
+    }
 
     render() {
         return (
-            <Button title="Get Items" onPress={() => getData()}>
+            <Button title="Get Items" onPress={() => console.log(this.state)}>
 
             </Button>
         )
