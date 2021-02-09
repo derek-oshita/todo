@@ -66,7 +66,7 @@ class GetItemsIndex extends React.Component {
 
     render() {
         return (
-            <ItemsList />
+            <ItemsList items={this.state.items}/>
         )
     }
 }
