@@ -1,6 +1,8 @@
 // VARIABLES 
 // const url = 'https://mighty-woodland-97273.herokuapp.com/api/items'; 
-const url = 'https://enigmatic-garden-30320.herokuapp.com/api/v1/comment'; 
+// const url = 'https://enigmatic-garden-30320.herokuapp.com/api/v1/comment'; 
+
+const url = 'https://jsonplaceholder.typicode.com/users'; 
 
 // MODEL 
 class GetItemsModel {
