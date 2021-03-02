@@ -1,9 +1,12 @@
 import React, {Component} from 'react';
-import {View, Button} from 'react-native'; 
+import {View, Button, StyleSheet } from 'react-native'; 
 
 import ItemsModel from '../models/ItemsModel'; 
 import Header from './Header'; 
 import Item from './Item'; 
+
+
+// https://reactnavigation.org/docs/params
 
 class ItemsList extends React.Component {
 
@@ -26,12 +29,19 @@ class ItemsList extends React.Component {
             )
         })
         return (
-            <View>
+            <View style={styles.container}>
             <Header title="Get Shit Done" />
                 {itemsList}
             </View>
         )
     }
 }
+
+
+const styles = StyleSheet.create({
+    container: {
+      flex: 1
+    }
+  })
 
 export default ItemsList; 

@@ -7,22 +7,13 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import ItemsList from './components/ItemsList';
 import CreateItem from './components/CreateItem'; 
+import HomeScreen from './components/Home'; 
 
 // IGNORE LOGBOX NOTIFICATIONS
 LogBox.ignoreLogs(['Remote debugger']);
 
 
-function HomeScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Home Screen</Text>
-      <Button
-        title="Go to Items List"
-        onPress={() => navigation.navigate('Items List')}
-      />
-    </View>
-  );
-}
+// https://reactnavigation.org/docs/params
 
 function DetailsScreen() {
   return (
@@ -58,11 +49,6 @@ const App = () => {
   )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: 60
-  }
-})
+
 
 export default App; 
