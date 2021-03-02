@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'; 
 import { Ionicons, FontAwesome } from '@expo/vector-icons'; 
 
-const Item = () => {
+const Item = ({ item }) => {
     return (
         // <TouchableOpacity style={styles.listItem}>
         //     <View style={styles.listItemView} >
@@ -12,7 +12,7 @@ const Item = () => {
         // </TouchableOpacity>
 
         <View>
-            
+            <Text>{item.text}</Text>
         </View>
     )
 }

@@ -14,13 +14,20 @@ class ItemsList extends React.Component {
             .then((result) => {
                 this.setState({items: result})
             })
-            .catch((err) => console.log('Error with GetItemsIndex', err))
+            .catch((err) => console.log('Error with ItemsList component', err))
     }
 
     render() {
+
+        const itemsList = this.state.items.map((item) => {
+            return (
+                <Item item={item} ke={item.id}/>
+            )
+        })
+
         return (
             <View>
-                
+                {itemsList}
             </View>
         )
     }
