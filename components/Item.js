@@ -12,7 +12,7 @@ const Item = ({ item }) => {
         // </TouchableOpacity>
 
         <View>
-            <Text>{item.text}</Text>
+            <Text>{item.title}</Text>
         </View>
     )
 }

@@ -21,7 +21,7 @@ class ItemsList extends React.Component {
 
         const itemsList = this.state.items.map((item) => {
             return (
-                <Item item={item} ke={item.id}/>
+                <Item item={item} key={item.id}/>
             )
         })
 
