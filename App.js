@@ -4,6 +4,7 @@ import 'react-native-get-random-values';
 
 import Header from './components/Header'; 
 import ItemsList from './components/ItemsList';
+import CreateItem from './components/CreateItem'; 
 
 // IGNORE LOGBOX NOTIFICATIONS
 LogBox.ignoreLogs(['Remote debugger']);
@@ -14,6 +15,7 @@ const App = () => {
     <View style={styles.container}>
       <Header title="Task List" />
       <ItemsList />
+      <CreateItem />
     </View>
   )
 }

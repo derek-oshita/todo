@@ -1,19 +1,25 @@
 import React from 'react'; 
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'; 
-import { Ionicons, FontAwesome } from '@expo/vector-icons'; 
+import { View, Text, StyleSheet, TouchableOpacity, Button } from 'react-native'; 
+import { FontAwesome } from '@expo/vector-icons'; 
+
+import ItemsModel from '../models/ItemsModel'; 
 
 const Item = ({ item }) => {
-    return (
-        // <TouchableOpacity style={styles.listItem}>
-        //     <View style={styles.listItemView} >
-        //         <Text style={styles.listItemText}>{item.text}</Text>
-        //         <FontAwesome name="remove" size={20} color="firebrick" onPress={() => deleteItem(item.id)} />
-        //     </View>
-        // </TouchableOpacity>
+    const handleDelete = () => {
+        ItemsModel.destroyItem(item._id)
+        .then((res) => console.log(res))
+        .catch((err) => console.log('Error with Item Component: ', err))
+    }
 
-        <View>
-            <Text>{item.title}</Text>
-        </View>
+
+    return (
+        <TouchableOpacity style={styles.listItem}>
+            <View style={styles.listItemView} >
+                <Text style={styles.listItemText}>{item.title}</Text>
+            {/* <Button onPress={this.handleDelete}><FontAwesome name="remove" size={20} color="firebrick" /></Button> */}
+            <Button title="Delete" onPress={handleDelete}></Button>
+            </View>
+        </TouchableOpacity>
     )
 }
 

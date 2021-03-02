@@ -2,18 +2,27 @@ import React, {useState} from 'react';
 import {View, Text, StyleSheet, TextInput, TouchableOpacity} from 'react-native'; 
 import { Ionicons, FontAwesome } from '@expo/vector-icons'; 
 
-const AddItem = ({addItem}) => {
+const CreateItem = () => {
     const [text, setText] = useState(''); 
 
     const onChange = (textValue) => setText(textValue); 
 
     return (
+        // <View>
+        //     <TextInput placeholder="Add Item..." style={styles.input} onChangeText={onChange} />
+        //     <TouchableOpacity style={styles.btn} onPress={() => addItem(text) }>
+        //         <Text style={styles.btnText}>
+        //             <FontAwesome name="plus" size={20} color="white"/>
+        //         Create Item</Text>
+        //     </TouchableOpacity>
+        // </View>
+
         <View>
             <TextInput placeholder="Add Item..." style={styles.input} onChangeText={onChange} />
-            <TouchableOpacity style={styles.btn} onPress={() => addItem(text) }>
+            <TouchableOpacity style={styles.btn} >
                 <Text style={styles.btnText}>
                     <FontAwesome name="plus" size={20} color="white"/>
-                Add Item</Text>
+                Create Item</Text>
             </TouchableOpacity>
         </View>
     )
@@ -37,4 +46,4 @@ const AddItem = ({addItem}) => {
     }
   })
   
-  export default AddItem; 
+  export default CreateItem; 
