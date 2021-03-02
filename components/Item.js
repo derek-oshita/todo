@@ -5,12 +5,12 @@ import { FontAwesome } from '@expo/vector-icons';
 import ItemsModel from '../models/ItemsModel'; 
 
 const Item = ({ item }) => {
+    
     const handleDelete = () => {
         ItemsModel.destroyItem(item._id)
         .then((res) => console.log(res))
         .catch((err) => console.log('Error with Item Component: ', err))
     }
-
 
     return (
         <TouchableOpacity style={styles.listItem}>

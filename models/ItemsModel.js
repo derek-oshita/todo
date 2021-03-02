@@ -3,6 +3,7 @@ const url = 'https://mighty-woodland-97273.herokuapp.com/api/items';
 
 // MODEL 
 class ItemsModel {
+  
     static getAllItems = () => {
       return fetch(url)
         .then((response) => response.json())

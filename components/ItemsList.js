@@ -2,9 +2,11 @@ import React, {Component} from 'react';
 import {View, Button} from 'react-native'; 
 
 import ItemsModel from '../models/ItemsModel'; 
+import Header from './Header'; 
 import Item from './Item'; 
 
 class ItemsList extends React.Component {
+
     state = {
         items: [], 
     }
@@ -20,11 +22,12 @@ class ItemsList extends React.Component {
     render() {
         const itemsList = this.state.items.map((item) => {
             return (
-                <Item item={item} key={item.id}/>
+                <Item item={item} key={item._id}/>
             )
         })
         return (
             <View>
+            <Header title="Get Shit Done" />
                 {itemsList}
             </View>
         )

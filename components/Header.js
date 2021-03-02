@@ -2,6 +2,7 @@ import React from 'react';
 import {View, Text, StyleSheet, Image} from 'react-native'; 
 
 const Header = ({ title }) => {
+  
     return (
       <View style={styles.header}>
         <Text style={styles.text}>{title}</Text>
