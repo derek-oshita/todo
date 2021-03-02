@@ -1,16 +1,29 @@
-import React, {useState, Component} from 'react'; 
-import {View, Text, StyleSheet, Image, FlatList, Alert, AppState, Button, LogBox} from 'react-native'; 
+import React, {Component} from 'react';
+import {View, Button} from 'react-native'; 
 
-function ItemsList (props) {
-    let items = props.items; 
+import GetItemsModel from '../models/GetItemsModel'; 
+import Item from './Item'; 
 
-    return (
+class ItemsList extends React.Component {
+    state = {
+        items: [], 
+    }
+
+    componentDidMount() {
+        GetItemsModel.getAllItems()
+            .then((result) => {
+                this.setState({items: result})
+            })
+            .catch((err) => console.log('Error with GetItemsIndex', err))
+    }
+
+    render() {
+        return (
             <View>
-                <Button title="Get Items" onPress={() => console.log(props.items)}>
-                </Button>
+                
             </View>
         )
-    
+    }
 }
 
 export default ItemsList; 

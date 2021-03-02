@@ -2,14 +2,18 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'; 
 import { Ionicons, FontAwesome } from '@expo/vector-icons'; 
 
-const ListItem = ({ item, deleteItem }) => {
+const Item = () => {
     return (
-        <TouchableOpacity style={styles.listItem}>
-            <View style={styles.listItemView} >
-                <Text style={styles.listItemText}>{item.text}</Text>
-                <FontAwesome name="remove" size={20} color="firebrick" onPress={() => deleteItem(item.id)} />
-            </View>
-        </TouchableOpacity>
+        // <TouchableOpacity style={styles.listItem}>
+        //     <View style={styles.listItemView} >
+        //         <Text style={styles.listItemText}>{item.text}</Text>
+        //         <FontAwesome name="remove" size={20} color="firebrick" onPress={() => deleteItem(item.id)} />
+        //     </View>
+        // </TouchableOpacity>
+
+        <View>
+            
+        </View>
     )
 }
 
@@ -30,4 +34,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default ListItem; 
+export default Item; 
